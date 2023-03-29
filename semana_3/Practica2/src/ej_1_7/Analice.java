@@ -1,4 +1,4 @@
-package tp02.ejercicio1;
+package ej_1_7;
 
 public class Analice {
 	// a) ¿Podría darle comportamiento a algún método de la superclase ListaDeEnteros? ¿Por qué la clase
