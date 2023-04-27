@@ -1,7 +1,4 @@
 package tp02.ejercicio2;
-
-import ej_2_3.Estudiante;
-
 /**
  * La clase ListaGenericaEnlazada es una ListaGenerica, donde los elementos de
  * la lista (nodos) referencian al siguiente elemento (nodo), por este motivo,
@@ -232,15 +229,6 @@ public class ListaEnlazadaGenerica<T> extends ListaGenerica<T> {
 				return false;
 		}
 		return true;
-	}
-	
-	public boolean agregarArreglo(T[] arreglo) {
-		int i = 0;
-		while(i < arreglo.length) {
-			agregarFinal(arreglo[i]);
-			i++;
-		}
-		return (i == arreglo.length);
 	}
 
 }

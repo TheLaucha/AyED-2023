@@ -1,6 +1,5 @@
 package tp02.ejercicio2;
 
-import ej_2_3.Estudiante;
 
 public abstract class ListaGenerica<T> {
 
@@ -109,8 +108,6 @@ public abstract class ListaGenerica<T> {
 	 * Devuelve una lista con una copia de los elementos de la lista generica receptora del mensaje
 	 * **/
 	public abstract ListaGenerica<T> clonar();
-
-	public abstract boolean agregarArreglo(T[] arr);
 
 	/**
 	 * Devuelve una lista sin elementos.

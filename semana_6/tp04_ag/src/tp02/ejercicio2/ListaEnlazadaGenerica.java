@@ -1,7 +1,4 @@
 package tp02.ejercicio2;
-
-import ej_2_3.Estudiante;
-
 /**
  * La clase ListaGenericaEnlazada es una ListaGenerica, donde los elementos de
  * la lista (nodos) referencian al siguiente elemento (nodo), por este motivo,
@@ -126,14 +123,10 @@ public class ListaEnlazadaGenerica<T> extends ListaGenerica<T> {
 		if (n == null)
 			return false;
 		else {
-			if (ant == null) {
+			if (ant == null)
 				this.inicio = this.inicio.getSiguiente();
-				this.fin = this.inicio;
-			}else {
+			else
 				ant.setSiguiente(n.getSiguiente());
-				if (actual==n)
-					actual = n.getSiguiente();
-			}
 			this.tamanio--;
 
 			return true;
@@ -157,10 +150,6 @@ public class ListaEnlazadaGenerica<T> extends ListaGenerica<T> {
 			n = n.getSiguiente();
 		}
 		ant.setSiguiente(n.getSiguiente());
-		
-		if (actual==n)
-			actual = n.getSiguiente();
-		
 		if (ant.getSiguiente() == null)
 			this.fin = ant;
 		return true;
@@ -212,17 +201,13 @@ public class ListaEnlazadaGenerica<T> extends ListaGenerica<T> {
 
 	@Override
 	public ListaGenerica<T> clonar() {
-		
-		NodoGenerico<T> punteroPrevio = this.actual;
 		ListaGenerica<T> nueva = new ListaEnlazadaGenerica<T>();
 		this.comenzar();
 		while (!this.fin()) {
 			nueva.agregarFinal(this.proximo());
 		}
-		this.actual = punteroPrevio;
 		return nueva;
 	}
-	
 	public boolean equals(Object o) {
 		if (this==o)
 			return true;
@@ -232,15 +217,7 @@ public class ListaEnlazadaGenerica<T> extends ListaGenerica<T> {
 				return false;
 		}
 		return true;
-	}
-	
-	public boolean agregarArreglo(T[] arreglo) {
-		int i = 0;
-		while(i < arreglo.length) {
-			agregarFinal(arreglo[i]);
-			i++;
-		}
-		return (i == arreglo.length);
+		
 	}
 
 }
